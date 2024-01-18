@@ -31,6 +31,16 @@ If ever lost select object in Hierarchy tab and press 'F'
 Today I covered:
 1) Create new project
 2) Import assests and open Prototype
-3) Add object to scene
-4) Reposition obstacles
+   - Assets > Import Package > Custom Package
+4) Add object to scene
+5) Reposition obstacles
+
+# Jan 17, 2024
+
+5) Locate Camera and Run the Game
+  - select camera from play and press 'F' to focus on it
+  - to run the game hit the play button
+
+
+
 
