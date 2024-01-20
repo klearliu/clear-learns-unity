@@ -81,4 +81,15 @@ All seven "Getting Started" components are now completed
       - We do this by `transform.Translate(Vector3.forward * Time.deltaTime * int)`
       - The higher the int value the faster
 
+# Jan 20, 2024
 
+1.2.6) Add RigidBody Components to Objects
+  - RigidBody component auto adds physics to our game, ex. collision and gravity
+  - Select Object > Add Component > Physics > RigidBody
+  - You usually want to have another object to have a RigidBody to see the effect
+  - The Mesh Collider tab is just a way to state if an object can be collided with
+
+1.2.7) Duplicate Obstacles
+  - Select game object in Hierarchy and do (ctrl/cmd + D) or right click and select duplicate
+  - Rename duplicated object accordingly, and adjust anything in the inspector
+  - You can also duplicate more than one objects at a time
