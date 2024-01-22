@@ -99,3 +99,36 @@ All seven "Getting Started" components are now completed
 1.3.1) Variables in C# and Unity
   - by setting up `public float speed = 5.0f;` we can see speed outside of its class
   - you can also now modify the speed within the script inspector
+
+# Jan 22, 2024
+
+1.3.2) Creating script for camera
+  - Create a new C# in your scripts folder `FollowPlayer.cs`
+  - In Unity drag script to camera
+  - In C# script create a public member variable `public GameObject variable;`
+  - In Unity drag game object (from hiearchy) to camera's inspector
+  - In C# script inside Update() `transform.position = player.transform.position;`
+      - transform transform.position means current position
+      - so by opening access to camera's position to GameObject's position the camera
+        will track our desired GameObject
+
+1.3.3) Create an Offset for Camera's Position
+  - In C# script of Update()
+      - `transform.position = player.transform.position + new Vector3(0,6,-9);`
+
+1.3.4) Making Vector3 a Variable
+  - Create a private member variable `private Vector3 offset = new Vector3(0,6,-9);`
+  - Update() `transform.position = player.transform.position + offset;`
+
+1.3.5) Smoothen Camera with LateUpdate()
+  - Sometimes the camera might move before the GameObject or the other way around
+  - To resolve this issue we change Update() to LateUpdate()
+      - This makes it so that update is only made after all the updates are made
+
+1.3.6) Edit PlayMode tint colour
+  - Sometimes it may be hard to tell if you are in playmode or not
+  - To counter this we can use some GUI tinting
+  - Go to Preferences > Colours > Playmode tint
+      - Adjust as needed
+
+1.3.4)
