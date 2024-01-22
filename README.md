@@ -117,7 +117,7 @@ All seven "Getting Started" components are now completed
       - `transform.position = player.transform.position + new Vector3(0,6,-9);`
 
 1.3.4) Making Vector3 a Variable
-  - Create a private member variable `private Vector3 offset = new Vector3(0,6,-9);`
+  - Initialize a private member variable `private Vector3 offset = new Vector3(0,6,-9);`
   - Update() `transform.position = player.transform.position + offset;`
 
 1.3.5) Smoothen Camera with LateUpdate()
@@ -131,4 +131,57 @@ All seven "Getting Started" components are now completed
   - Go to Preferences > Colours > Playmode tint
       - Adjust as needed
 
-1.3.4)
+1.4.1) Moving PlayerObject Left/Right
+  - Create a public member variable `public float turnSpeed;` inside PlayerController
+  - Inside Update() `transform.Translate(Vector3.right * Time.deltaTime * turnSpeed);`
+
+1.4.2) Creating input to move PlayerObject Left/Right
+  - Edit > Input Manager > Axes
+  - Our focus will be Horizontal axis
+  - Note: we will be focusing on the negative and positive button section
+  - In our C# script for PlayerObject
+      - Create a public member variable `public float horizontalMovement;`
+      - Inside Update() `horizontalInput = Input.GetAxis("{whatever the Name section is on Input Manager > Horizontal}")`
+      - `transform.Translate(Vector3.right * time.DeltaTime * turnSpeed * horizontalInput);`
+      - Typically you would want speed, turnSpeed, and horizontalInput to be private, but for testing public is better
+
+1.4.3) Creating input to move PlayerObject Forward/Backward
+  - Edit > Input Manager > Axes
+  - Our focus will be Verticle axis
+  - Note: we will be focusing on the negative and positive button section
+  - In our C# script for PlayerObject
+      - Create a public member variable `public float forwardInput;`
+      - Inside Update() `forwardInput = Input.GetAxis("{whatever the Name section is on Input Manager > Horizontal}")`
+      - `transform.Translate(Vector3.right * time.DeltaTime * turnSpeed * forwardInput);`
+
+1.4.4) Creating Rotation Effect for PlayerObject when moving Left/Right
+  - In Update() replace `transform.Translate(Vector3.right * time.DeltaTime * turnSpeed * horizontalInput);`
+    with `transform.Rotate(Vector3.up, time.DeltaTime * turnSpeed * horizontalInput);`
+  - At the top left we have local/global toggle
+      - Local: Z - Axis points to forward direction
+      - Global: Z - Axis points in the positive direction of the world
+      - When POSITIONING objects it is best to use global mode to better accuracy
+      - During playmode local has a friendlier interface
+
+1.4.5) Organizing Hierarchy
+  - Right click on blank space in Hierarchy > Create Empty > {rename to how you see fit}
+  - Drag related GameObjects to that Empty
+  - This is called Nesting GameObject, we will learn more features about Nesting GameObject
+  - In your C# scripts change any finalized variables to private to reduce clutter and any unwanted changes
+  - In FollowPlayer class, ensure that GameObject player is still public since we have a reference to it in unity
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
