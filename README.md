@@ -93,3 +93,9 @@ All seven "Getting Started" components are now completed
   - Select game object in Hierarchy and do (ctrl/cmd + D) or right click and select duplicate
   - Rename duplicated object accordingly, and adjust anything in the inspector
   - You can also duplicate more than one objects at a time
+
+# Jan 21, 2024
+
+1.3.1) Variables in C# and Unity
+  - by setting up `public float speed = 5.0f;` we can see speed outside of its class
+  - you can also now modify the speed within the script inspector
