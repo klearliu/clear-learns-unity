@@ -170,8 +170,53 @@ All seven "Getting Started" components are now completed
   - In your C# scripts change any finalized variables to private to reduce clutter and any unwanted changes
   - In FollowPlayer class, ensure that GameObject player is still public since we have a reference to it in unity
 
+# Jan 23, 2024
 
+Challenge 1 Plane
+https://connect-prd-cdn.unity.com/20210506/913574fa-af65-4d95-abe8-d90282b27a83/Challenge%201%20-%20Starter%20Files.zip
 
+In this challenge I downloaded some .zip files of a flappy bird like game with a plane.
+Bugs and objectives identified goes as followed:
+1) Plane is going backwards
+  - Objective: Make plane go forward
+  - Solution:
+    - PlayerControllerX.cs line 24
+    - `transform.Trnslate(Vector3.forward * speed);`
+
+2) Plane is going too fast
+  - Objective: Make plane go at a proper speed
+  - Solution:
+    - PlayerControllerX.cs line 7
+    - `public float speed = 0.2f;`
+
+3) The plane is tilting automatically
+  - Objective: Make the plane tilt only if the user presses the up/down arrows
+  - Solution:
+    - PlayerControllerX.cs lines 27
+    - `transform.Rotate(Vector3.left*rotationSpeed*Time.deltaTime*verticalInput);`
+
+4) The camera is in front of the plane
+  - Objective: Reposition it so it’s beside the plane
+  - Solution:
+    - Find main camera and go to inspector and adjust position settings to 40,2,5
+    - Rotation to 0, 270, 0
+
+5) The camera is not following the plane
+  - Objective: Make the camera follow the plane
+  - Solution:
+    - From Hierarchy drag Player to Main Camera's Inspector GameObject
+    - FollowPlayerX.cs line 8
+    - `private Vector3 offset = new Vector3(60, 2, 5);`
+
+6) Bonus: The plane’s propeller does not spin
+  - Objective: Create a script that spins the plane’s propeller
+  - Solution:
+    - Click Player object from Hierarchy > Propeller
+    - Create new C# script `SpinPropeller.cs`
+    - Add Component > Scripts > SpinPropeller.cs
+    - Edit SpinPropeller.cs in Update()
+    - initialize a member variable `public float spinSpeed = 500;`
+    - `transform.Rotate(Vector3.forward, Time.deltaTime*spinSpeed);`
 
 
 
