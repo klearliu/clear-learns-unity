@@ -187,9 +187,10 @@ All seven "Getting Started" components are now completed
 <details close>
 <summary># Jan 23, 2024</summary>
 
-Challenge 1 Plane
+Challenge 1 Plane from here:
+<br>
 https://connect-prd-cdn.unity.com/20210506/913574fa-af65-4d95-abe8-d90282b27a83/Challenge%201%20-%20Starter%20Files.zip
-
+<br>
 In this challenge I downloaded some .zip files of a flappy bird like game with a plane.
 Bugs and objectives identified goes as followed:
 1) Plane is going backwards
