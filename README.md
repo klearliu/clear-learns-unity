@@ -9,7 +9,8 @@ Within this short project I am expected to learn about:
   - Unit 4: Gameplay Mechanics
   - Unit 5: User Interface
 
-# Jan 16, 2024
+<details close>
+<summary># Jan 16, 2024</summary>
 
 View Controls in Unity
 Pan and Zoom | Right Click + wasd
@@ -34,14 +35,18 @@ Today I covered:
    - Assets > Import Package > Custom Package
 1.1.4) Add object to scene
 1.1.5) Reposition obstacles
+</details>
 
-# Jan 17, 2024
+<details close>
+<summary># Jan 17, 2024</summary>
 
 1.1.5) Locate Camera and Run the Game
   - select camera from play and press 'F' to focus on it
   - to run the game hit the play button
+</details>
 
-# Jan 18, 2024
+<details close>
+<summary># Jan 18, 2024</summary>
 
 1.1.6) Moving Camera
    - Moving & rotating camera
@@ -67,8 +72,10 @@ All seven "Getting Started" components are now completed
    - Double click on your C# script and it will open up Visual Studios Code
 1.2.3) Since we want to affect the 'Transform' tab in Unity we will create a line of code in Update()
   `transform.Translate(0,0,1);`
+</details>
 
-# Jan 19, 2024
+<details close>
+<summary># Jan 19, 2024</summary>
 
 1.2.4) Using Vector3 as Movement
   - Instead of `transform.Translate(0,0,1);`
@@ -80,8 +87,10 @@ All seven "Getting Started" components are now completed
   - To fix this we can change the movement speed to update every second instead
       - We do this by `transform.Translate(Vector3.forward * Time.deltaTime * int)`
       - The higher the int value the faster
+</details>
 
-# Jan 20, 2024
+<details close>
+<summary># Jan 20, 2024</summary>
 
 1.2.6) Add RigidBody Components to Objects
   - RigidBody component auto adds physics to our game, ex. collision and gravity
@@ -93,14 +102,18 @@ All seven "Getting Started" components are now completed
   - Select game object in Hierarchy and do (ctrl/cmd + D) or right click and select duplicate
   - Rename duplicated object accordingly, and adjust anything in the inspector
   - You can also duplicate more than one objects at a time
+</details>
 
-# Jan 21, 2024
+<details close>
+<summary># Jan 21, 2024</summary>
 
 1.3.1) Variables in C# and Unity
   - by setting up `public float speed = 5.0f;` we can see speed outside of its class
   - you can also now modify the speed within the script inspector
+</details>
 
-# Jan 22, 2024
+<details close>
+<summary># Jan 22, 2024</summary>
 
 1.3.2) Creating script for camera
   - Create a new C# in your scripts folder `FollowPlayer.cs`
@@ -169,8 +182,10 @@ All seven "Getting Started" components are now completed
   - This is called Nesting GameObject, we will learn more features about Nesting GameObject
   - In your C# scripts change any finalized variables to private to reduce clutter and any unwanted changes
   - In FollowPlayer class, ensure that GameObject player is still public since we have a reference to it in unity
+</details>
 
-# Jan 23, 2024
+<details close>
+<summary># Jan 23, 2024</summary>
 
 Challenge 1 Plane
 https://connect-prd-cdn.unity.com/20210506/913574fa-af65-4d95-abe8-d90282b27a83/Challenge%201%20-%20Starter%20Files.zip
@@ -217,7 +232,7 @@ Bugs and objectives identified goes as followed:
     - Edit SpinPropeller.cs in Update()
     - initialize a member variable `public float spinSpeed = 500;`
     - `transform.Rotate(Vector3.forward, Time.deltaTime*spinSpeed);`
-
+</details>
 
 
 
