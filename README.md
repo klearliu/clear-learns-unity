@@ -235,7 +235,9 @@ Bugs and objectives identified goes as followed:
     - `transform.Rotate(Vector3.forward, Time.deltaTime*spinSpeed);`
 </details>
 
-
+<details close>
+<summary>#Feb 3, 2024</summary>
+</details>
 
 
 
