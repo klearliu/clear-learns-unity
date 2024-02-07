@@ -248,7 +248,45 @@ Basic Gameplay Unit 2
 2.1.2) Add the Player, Animals, and Food
   - Position game objects (ie humans and animals) onto a plane
   - Changing textures of a plane
-  
+
+2.1.3 and 4) Moving player left/right
+  - `horizontalInput = Input.GetAxis("Horizontal");`
+  - `transform.Translate(Vector3.right*horizontalInput*Time.deltaTime*speed);`
+
+2.1.5) Keep the player inbounds
+  - `transform.Translate(Vector3.right*horizontal*Time.deltaTime*speed);`
+      - Make sure that is inside `if(transform.position.x < -10){...}`
+
+2.2.1) Understanding Prefab
+  Prefab short for prefabricated. We can utilize this to reuse components in our scene
+  Instantiate: make a new copy or clone
+  Making object move immediately upon play
+  `transform.Translate(Vector3.forward*Time.deltaTime*speed);`
+
+2.2.2) Make the projectile into a prefab
+  - Create a new folder in Assests /Prefabs
+  - Drag the food object (from Hierarchy) into the Prefabs folder > Original Variant
+  - "think of prefab as a defined template of a gameobject"
+  - next we need to create a reference of the pizza to the PlayerControl script
+      - in PlayerControl.cs:
+      - `public GameObject projectilePrefab;`
+  - Drag the food object from /Prefabs and drag it into the GameObject inspector of Player
+
+2.2.3) Test for spacebar press
+  - In PlayerController.cs
+  - `if(Input.GetKeyDown(KeyCode.Space))`
+
+2.2.4) Launch projectile on spacebar press
+  - Inside our just created if statement
+      - `Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);`
+
+2.2.5) Make animals into prefabs
+  - Rotate all animals in your scene by 180 degrees
+  - Drag MoveForward.cs into all the animal objects
+  - Adjust any speeds or templated attributes
+  - Drag to /Prefabs from Hierarchy
+
+2.2.6) Destroy projectiles offscreen
 
 </details>
 
