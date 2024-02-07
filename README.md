@@ -237,6 +237,19 @@ Bugs and objectives identified goes as followed:
 
 <details close>
 <summary>#Feb 6, 2024</summary>
+Lab 1: Creating a sample GDD document
+Quiz 1: 9/10
+
+Basic Gameplay Unit 2
+2.1) Player Positioning
+
+2.1.1) Setting up Prototype 2
+
+2.1.2) Add the Player, Animals, and Food
+  - Position game objects (ie humans and animals) onto a plane
+  - Changing textures of a plane
+  
+
 </details>
 
 
