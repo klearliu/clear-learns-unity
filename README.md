@@ -293,6 +293,62 @@ Basic Gameplay Unit 2
 <details close>
 <summary>#Feb 12, 2024</summary>
 
+2.2.6 and 2.2.7) Destroy projectiles offscreen
+  - Create a new script for Pizza and inside update do `if(transform.position.z>30){Destroy(gameObject);}`
+  - Inside Unity: Go to Pizza and find Overrides drop-down > apply all
+  - We can also do the same for lower bounds
+  - `if(transform.position.z<)`
+
+2.3.1) Create a spawn manager
+  - In hiearchry an empty gameobect and call it SpawnManager
+  - Create a C# script also called SpawnManager.cs and add it as a component to SpawnManger from hiearchy
+  - `public GameObject[] animalPrefabs;`
+  - In Unity drag the three animals from prefabs to the C# GameObject section
+
+2.3.2) Spawn an animal if S is pressed
+  - SpawnManager.cs
+      - `public int animalIndex;`
+      - `if(Iinput.GetKeyDown(KeyCode.S)){
+           Instantiate(animalPrefabs[animalIndex], new Vector3(0,0,20),animalPrefabs[animalIndex].transform.rotation);}`
+
+2.3.3) Spawn random animals from array
+  - remove the `public int animalIndex;`
+  - redeclare inside the if statment as:
+      - `int animalIndex = Randm.Range(0,animalPrefabs.Length);`
+
+2.3.4) Randomize the spawn location
+  - `private float spawnRangeX = 10;`
+  - `private float spawnPosZ = 10;`
+  - inside Update()
+      - `Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX,spawnRange),0,spawnPosZ);`
+      - `Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);}`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
 </details>
 
 
