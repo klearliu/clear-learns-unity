@@ -323,7 +323,16 @@ Basic Gameplay Unit 2
       - `Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX,spawnRange),0,spawnPosZ);`
       - `Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);}`
 
+2.3.5) Change the perspective of the camera
+  - Select Main Camera from hiearchy
+  - Inside Scene Editor toggle between ISO and Persp
+      - ISO good for 2D
+      - Persp 3D
+  - Go to inspector and select your desired project
 
+2.4.1) Make a new method to spawn animals
+  - In SpawnManager.cs create a new metheod called SpawnRandomAnimal(){}
+  - and paste the contents from the if statement
 
 
 
