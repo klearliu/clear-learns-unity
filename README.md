@@ -333,31 +333,32 @@ Basic Gameplay Unit 2
 2.4.1) Make a new method to spawn animals
   - In SpawnManager.cs create a new metheod called SpawnRandomAnimal(){}
   - and paste the contents from the if statement
+</details>
 
+<details close>
+<summary>#Feb 13, 2024</summary>
+2.4.2) Spawn the animals at timed intervals
+  - remove the if statement in the update()
+  - in Start()
+    - `InvokeRepeating("SpawnRandomAnimal", startDelay, spawnInterval);`
 
+2.4.3) Add collider and trigger components
+  - on all of your animal prefabs add a box collider and adjust it so that it surrounds the animal
+  - do the same with the pizza
+  - ensure that isTrigger box is checked
+  - for the food GameObject make sure we add a RigidBody component with use gravity turned off
 
+2.4.4) Destroy objects on collision
+  - Create a new DetectCollisions.cs and apply to all prefabs
+  - Override a metheod `private void OnTriggerEnter(Collider other){...}`
+  - `Destroy(gameObject);` and `Destroy(other.gameObject);`
 
+2.4.5) Trigger a “Game Over” message
+  - in DestroyOutOfBounds.cs
+      - inside the else if
+          - `Debug.Log("Game Over!!!");`
+  - using `Debug.Log()` is a great way to test our code
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
 </details>
 
 
